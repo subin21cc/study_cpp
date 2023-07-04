@@ -17,6 +17,8 @@ int main()
     Circle pizza;
     pizza.radius = 38;
     double area = pizza.getArea();
-    cout << "pizza의 반지름은 " << pizza.radius << ", pizzat의 면적은 " << area << endl;
+    cout << "pizza의 반지름은 " << pizza.radius << ", pizza의 면적은 " << area << endl;
 
+    Circle ball(20);
+    cout << "ball의 반지름은 " << ball.radius << ", ball의 면적은 " << ball.getArea() << endl;
 }
