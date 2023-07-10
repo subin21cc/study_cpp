@@ -17,7 +17,7 @@ public:
 	SingleList();
 	~SingleList();
 	void append(ElementType e);
-	void removeAt(int l);
+	bool removeAt(int l);
 	void print();
 	void insertAt(int l, ElementType e);
 };

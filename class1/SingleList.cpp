@@ -38,8 +38,39 @@ void SingleList::append(ElementType e)
 	}
 }
 
-void SingleList::removeAt(int l)
+bool SingleList::removeAt(int l)
 {
+	if (head == nullptr)
+	{
+		return false;
+	}
+
+	if (l == 0)
+	{
+		Node* t = head->NextNode;
+		delete head;
+		head = t;
+		return true;
+	}
+
+	Node* next = head;
+	int count = 0;
+	while (next != nullptr)
+	{
+		if (count + 1 == l)
+		{
+			if (next->NextNode != nullptr)
+			{
+				Node* t = next->NextNode->NextNode;
+				delete next->NextNode;
+				next->NextNode = t;
+			}
+			return true;
+		}
+		count++;
+		next = next->NextNode;
+	}
+	return false;
 }
 
 void SingleList::print()
