@@ -64,8 +64,9 @@ bool SingleList::removeAt(int l)
 				Node* t = next->NextNode->NextNode;
 				delete next->NextNode;
 				next->NextNode = t;
+				return true;
 			}
-			return true;
+			return false;
 		}
 		count++;
 		next = next->NextNode;
@@ -87,4 +88,12 @@ void SingleList::print()
 
 void SingleList::insertAt(int l, ElementType e)
 {
+	Node* n = new Node;
+
+	if (n)
+	{
+		n->Data = e;
+		n->NextNode = nullptr;
+	}
+
 }

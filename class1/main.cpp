@@ -36,17 +36,12 @@ void list_test1()
 	*/
 
 	SingleList list;
-	list.removeAt(-1);
-	list.print();
 
 	list.append(4);
 	list.append(3);
 	list.append(0);
 	list.append(9);
 
-
-	list.print();
-	list.removeAt(3);
 	list.print();
 
 	list.removeAt(0);
