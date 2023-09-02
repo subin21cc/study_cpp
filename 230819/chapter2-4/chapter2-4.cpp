@@ -10,14 +10,17 @@ int main() {
 	{
 		cin >> num[i];
 
-		max = num[0];
+	}
 
+	max = num[0];
+
+	for (int i = 1; i < 5; i++)
+	{
 		if (max < num[i])
 		{
 			max = num[i];
 		}
 	}
-
 	cout << "제일 큰 수 = " << max;
 
 	return 0;
